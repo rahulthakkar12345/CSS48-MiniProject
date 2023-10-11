@@ -1,0 +1,53 @@
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 1 */
+/* setting the css style of anchor tag */
+a {
+	text-decoration: none;
+	color: #262626;
+	font-family: sans-serif;
+	font-size: 40px;
+	border: 3px solid #262626;
+	padding: 40px 80px;
+	transition: all .5s;
+	position: relative;
+	/* 4 */
+	overflow: hidden;
+}
+
+/* 2 */
+/* setting the content on css styling  */
+a:before {
+	content: 'Its easy!!';
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* setting the width and height to 100% */
+	height: 100%;
+	width: 100%;
+	background-color: #262626;
+	color: white;
+	/* set content to center with flex properties */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* we will scale it to 5 times */
+	transform: scale(5);
+	/* set the opacity to 0 so its not visible */
+	opacity: 0;
+	transition: all .5s;
+}
+
+/* 3 */
+a:hover:before {
+	/* change the scale to its normal size,
+	so it will move from bigger to smaller size */
+	transform: scale(1);
+	/* change the opacity to 1 so its visible */
+	opacity: 1;
+}
